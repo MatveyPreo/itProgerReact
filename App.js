@@ -5,12 +5,11 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text >Hi {'\n'} hi </Text>
-      <Button
-        
-        title="Learn More"
-        color="#841584"
-        accessibilityLabel="Learn more about this purple button"
-      />
+      <Text >Hi {'\n'} hi </Text>
+      
+      
+      
+
       <StatusBar style="auto" />
     </View>
   );
