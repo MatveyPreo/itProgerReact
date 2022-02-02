@@ -1,34 +1,31 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, SafeAreaView, View, Platform } from 'react-native';
+import { StyleSheet, Text, SafeAreaView, View } from 'react-native';
+import { backgroundColor } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
 
 export default function App() {
   
   // ghgfhfgh
   return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.box}>
-      <Text>Hello </Text>
-      </View>
-      
-      <StatusBar style="auto" />
+    <SafeAreaView style={styles.mainBlock}>
+      <View style={[styles.box, {backgroundColor: 'yellow'}]}></View>
+      <View style={[styles.box, {backgroundColor: 'red'}]}></View>
+      <View style={[styles.box, {backgroundColor: 'blue'}]}></View>
     </SafeAreaView>
   );
 }
 const simpleStyle = {backgroundColor: 'blue', color: 'red'}
 const styles = StyleSheet.create({
-  container: {
+  mainBlock: {
     flex: 1,
-    backgroundColor: '#fff',
-  
+    flexDirection: 'column', //в колонку
+    //flexDirection: 'column-reverse'- колонка в обратном порядке
+    //flexDirection: 'row' - поочереди 
+    justifyContent: 'space-around',
+    alignItems: 'center'
   },
-  box: {
-    backgroundColor: 'green',
-    width: '50%',
-    height: '50%',
-    opacity: 0.9, //прозрачность
-    borderWidth: 2, // обводка
-    borderColor: 'red',
-    top: Platform.OS === "ios" ? 150 : 160,
-    left: 150
+  box:{
+    height: 100,
+    width: 100
   }
+
 });
