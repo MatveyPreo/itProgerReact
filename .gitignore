@@ -19,3 +19,4 @@ web-build/
 .vs/slnx.sqlite
 .vs/VSWorkspaceState.json
 .idea/vcs.xml
+components/list.js
